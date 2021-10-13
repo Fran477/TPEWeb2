@@ -1,0 +1,116 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.nav a {
+    text-decoration: none;
+    color:red;
+}
+
+.nav{
+    
+    background-color: whitesmoke;
+    border-bottom: solid black 0.5px;
+    padding: 20px;
+}
+
+.nav ul {
+   
+    list-style-type: none;
+}
+
+.logo{
+    width: 30%;
+}
+
+.div-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-logout{
+    width: 13%;
+}
+
+
+
+.img-producto{
+    width: 400px;
+}
+
+.from-agregar{
+    display: flex;
+    display: flex;
+    margin: 10px 100px 10px 120px;
+}
+
+.from-agregar input{
+    margin: 5px;
+}
+
+.li-home{
+    font-size: 20px;
+    font-style:initial;
+    margin: 10px 25px 5px 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.li-home_log{
+    margin: 10px 10px 10px 600px; 
+}
+
+.thead{
+    background-color:rgb(107, 106, 106);
+    color:white ;
+}
+
+.div-table{
+    margin: 30px;
+}
+
+.footer{
+    background-color: rgb(122, 122, 122);
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    
+}
+
+.container-login{
+    
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/595/033/non_2x/vector-object-and-icons-for-sport-label-gym-badge-fitness-logo-design.jpg);
+    background-size: 750px;
+    padding: 80px;
+    align-items: center;
+    align-content: center;
+    margin: 150px 500px 150px 500px; 
+    border-top: solid rgb(92, 92, 92) 30px;
+    border-bottom: solid rgb(92, 92, 92) 10px;
+    border-left: solid rgb(92, 92, 92) 5px;
+    border-right: solid rgb(92, 92, 92) 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.from-login input, h6{
+    margin: 5px;
+}
+
+
+
+
+
+
