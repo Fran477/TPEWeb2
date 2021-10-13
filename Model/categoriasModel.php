@@ -6,7 +6,7 @@ class categoriasModel
 
     function __construct()
     {
-        //nos conectamos a la base de datos dbname=tpe_web2
+        
         $this->db = new PDO('mysql:host=localhost;' . 'dbname=db_deportes;charset=utf8', 'root', '');
     }
 
@@ -18,10 +18,37 @@ class categoriasModel
         
         return $categorias;
     }
-}
-//<---no funciona---->
-// function agregarCategorias($id_categoria, $nombre, $descripcion){
+
     
-//     $query = $this->db->prepare("INSERT INTO categorias(id_categoria,nombre,descripcion) VALUES(?,?,?)");
-//     $query->execute(array($id_categoria,$nombre,$descripcion));
-// }
+    function getCategoria($id){
+        
+        $query = $this->db->prepare("SELECT * FROM categorias WHERE id_categoria=?");
+        $query->execute(array($id));
+        $categoria = $query->fetch(PDO::FETCH_OBJ);
+        
+        return $categoria;
+    }
+
+
+    function agregarCategorias($nombre, $descripcion){
+    
+        $query = $this->db->prepare("INSERT INTO categorias(nombre,descripcion) VALUES(?,?)");
+        $query->execute(array($nombre,$descripcion)); }
+    
+   
+
+    function editarCategoria($nombre, $descripcion, $id_categoria)
+    {
+        $query = $this->db->prepare("UPDATE categorias SET nombre=?,  descripcion=? WHERE id_categoria=?");
+        $query->execute(array($nombre, $descripcion, $id_categoria));
+        
+    }
+
+//<-----------Solo deja borrar categorias que no tengan productos asociados------>
+//<-----------falta arreglar-------------->
+    function borrarCategoria($id)
+    {
+        $query = $this->db->prepare("DELETE FROM categorias WHERE id_categoria=?");
+        $query->execute(array($id));
+    }
+}

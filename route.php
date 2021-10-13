@@ -71,10 +71,24 @@ switch ($params[0]) {
         break;
 
     
-    //<---no funciona---->
-    // case 'agregarCategorias':
-    //         $categoriasController->agregarCategorias();
-    //         break;
+//<----Administracion de Categorias----------->
+    case 'agregarCategorias':
+        $categoriasController->agregarCategorias();
+         break;
+
+    case 'mostrarEditarCategoria':
+            $categoriasController->FormularioEditarCategoria($params[1]);
+            break;
+    case 'editarCategoria':
+            $categoriasController->editarCategoria($params[1]);
+            break;
+
+//<-----------Solo deja borrar categorias que no tengan productos asociados------>
+//<-----------falta arreglar-------------->
+    case 'borrarCategoria':
+            $categoriasController->borrarCategoria($params[1]);
+            break;
+        
 
     default:
         echo ('404 Page not found');

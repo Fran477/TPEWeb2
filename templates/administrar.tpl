@@ -17,6 +17,16 @@
 </form>
 </nav>
 
+<figure class="text-center"><h1 class="display-6">Agregar una categora</h1></figure>
+<div class="navbar navbar-light bg-light">
+<form class="from-agregar" action="agregarCategorias" method="POST">
+    <input class="form-control mr-sm-2" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+    <input class="form-control mr-sm-2"  type="text" name="descripcion" id="precio" placeholder="Precio" required>
+    <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Enviar">
+</form>
+</div>
+{include file= 'templates/categoriasAdmin.tpl'}
+
 {include file= 'templates/productosAdmin.tpl'}
 
 {include file= 'templates/footer.tpl'}
