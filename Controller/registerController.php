@@ -20,7 +20,7 @@ class registerController{
         $usuario = $_POST['nombre'];
         $contraseña = password_hash($_POST['clave'], PASSWORD_BCRYPT);
     
-        $this->model->registrar($usuario, $contrase);
+        $this->model->registrar($usuario, $contraseña);
         $this->view->redirigirHome();}
 
 }
