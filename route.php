@@ -92,5 +92,6 @@ switch ($params[0]) {
 
     default:
         echo ('404 Page not found');
+        hola probando git
         break;
 }
